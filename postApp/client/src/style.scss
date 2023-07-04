@@ -1,0 +1,383 @@
+
+$lightorange: #f7af7c;
+$orange: #ee7722;
+
+.app{
+    display: flex;
+    justify-content: center;
+
+    .kontener{
+        width: 1024px;
+
+
+        .link{
+            text-decoration: none;
+            color: inherit;
+        }
+                //Logowaniee/Rejestracja
+        .authenticate{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $lightorange;
+
+            h1{
+                font-size: 25px;
+                color: $orange;
+                margin-bottom: 20px;
+
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                background-color: white;
+                width: 200px;
+                gap: 20px;
+
+                input{
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                }
+                button{
+                    padding: 10px;
+                    border: none;
+                    background-color: $orange;
+                    color: white;
+                    cursor: pointer;
+                }
+                p{
+                    font-size: 12px;
+                    text-align: center;
+                }
+                span{
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+            
+        }
+        //Pasek menu
+        .pasekmenu{
+            .kontener{
+                padding: 10px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .logo{
+                    img{
+                        width: 80px;
+                    }
+                }
+                .linki{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    h6{
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                    
+                    span{
+                        cursor: pointer;
+                    }
+
+                    .wczytywanie{
+                        background-color: $lightorange;
+                        width: 60px;
+                        height: 30px;
+                        border-radius: 10%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+                        border: 1px solid white;
+
+                        &:hover{
+                            color: $orange;
+                            background-color: white;
+                            border: 1px solid $orange;
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+        //Stopka
+        footer{
+            margin-top: 100px;
+            padding: 20px;
+            background-color: $lightorange;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+
+            img{
+                height: 40px;
+            }
+        }
+        //Głowna
+        .glowna{
+
+            .posty{
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 150px;
+
+            }
+            .post{
+                display: flex;
+                gap: 10px;
+
+
+                &:nth-child(2n+1){
+                    flex-direction: row-reverse;
+                }
+
+                .img{
+                    flex: 2;
+                    position: relative;
+
+                    &::after{
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background-color: $lightorange;
+                        position: absolute;
+                        top: 20px;
+                        left: -20px;
+                        z-index: -1;
+
+                    }
+
+                    img{
+                        width: 100%;
+                        max-height: 400px;
+                        object-fit: cover;
+                        
+                    }
+                }
+                .content{
+                    flex: 3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    h1{
+                        font-size: 40px;
+
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                    button{
+                        width: max-content;
+                        padding: 10px 20px;
+                        border: none;
+                        cursor: pointer;
+                        background-color: white;
+                        border: 1px solid $orange;
+                        color: $orange;
+
+                        &:hover{
+                            border: 1px solid white;
+                            background-color: $lightorange;
+                            color:black;
+                        }
+                    }
+                }
+            }
+        }
+        //Autor
+
+        .autor{
+            display: flex;
+            gap: 50px;
+
+            .content{
+                display: flex;
+                flex:5;
+                gap: 20px;
+                flex-direction: column;
+
+                img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+                    
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    span{
+                        
+                        font-weight: bold;
+                    }
+                    p{
+                        margin-top: auto;
+                    }
+                    
+                }
+                .edycja{
+                    display: flex;
+                    gap: 5px;
+
+                    img{
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                    }
+                }
+                h1{
+                    font-size: 40px;
+                    color: black;
+                }
+                p{
+                    text-align: justify;
+                    line-height: 24px;
+                }
+            }
+            .menu{
+                flex:2;
+                gap: 25px;
+                flex-direction: column;
+                display: flex;
+
+                h1{
+                    font-style: 18px;
+                    color: black;
+
+                }
+                .post{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                 
+                    img{
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                    h2{
+                        color:black;
+                    }
+                    button{
+                        width: max-content;
+                        padding: 7.5px 15px;
+                        border:none;
+                        cursor: pointer;
+                        color: $orange;
+                        background-color: white;
+                        border: 1px solid $orange;
+
+                        &:hover{
+                            border: 1px solid white;
+                            background-color: $lightorange;
+                            color:black;
+
+                        }
+
+                    }
+                }
+            }
+            
+        }
+        //Napisz
+        .dodaj{
+            margin-top: 18px;
+            display: flex;
+            gap: 18px;
+            
+            .content{
+                flex:5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input{
+                    padding: 8px;
+                    border: 1px solid lightgray;
+                }
+                .edytor{
+                    height: 280px;
+                    overflow: scroll;
+
+                    .edit{
+                        height: 100%;
+                        border: none;
+                        border: 1px solid lightgray;
+                        
+                    }
+                }
+            }
+            .menu{
+                flex: 2;
+                display: flex;
+                flex-direction:column;
+                gap: 20px;
+                
+                .item {
+                    
+                    border: 1px solid lightgray;
+                    padding: 8px;
+                    flex:1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    color: black;
+                    //align-items: flex-start;
+
+                    h1{
+                        font-size: 20px;
+                    }
+                    .file{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    .buttons{
+                        display: flex;
+                        justify-content: space-between; //weryfiukacja
+
+                        :first-child{
+                            cursor: pointer;
+                            color:$orange;
+                            background-color: white;
+                            border: 1px solid $orange;
+                            padding: 3px 5px;
+
+                        }
+                        :last-child{
+                            cursor: pointer;
+                            color: white;
+                            background-color: $orange;
+                            border: 1px solid $orange;
+                            padding: 3px 5px;
+                            
+                        }
+                    }
+                }
+                
+               
+            }
+        }
+    } 
+}
